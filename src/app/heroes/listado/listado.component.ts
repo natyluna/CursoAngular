@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { clear } from 'console';
+
 
 @Component({
   selector: 'app-listado',
