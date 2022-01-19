@@ -1,4 +1,4 @@
-import { Component, Input, Output,EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Personaje } from '../interfaces/dbz.interface';
 import { DbzService } from '../services/dbz.service';
@@ -33,6 +33,13 @@ export class AgregarComponent  {
     this.nuevo={
       nombre: '',
       poder: 0
+    }
+  }
+  dateLimit(){
+    console.log("entra  validar la fecha");
+    if(this.nuevo.nombre > "2030-12-31"){
+     console.log("entro a valiidar")
+      return false;
     }
   }
   //recibe el dato con el event
